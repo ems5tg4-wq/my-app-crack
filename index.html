@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMTP Checker Pro</title>
+    <script>
+      // Protection against environments where window.fetch is a read-only getter
+      (function() {
+        try {
+          const desc = Object.getOwnPropertyDescriptor(window, 'fetch');
+          if (desc && !desc.writable && !desc.set) {
+            const originalFetch = window.fetch;
+            Object.defineProperty(window, 'fetch', {
+              value: originalFetch,
+              writable: true,
+              configurable: true,
+              enumerable: true
+            });
+          }
+        } catch (e) {
+          console.warn("SMTP Checker: Unable to configure fetch descriptor", e);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

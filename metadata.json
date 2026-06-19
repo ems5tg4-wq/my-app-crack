@@ -1,0 +1,6 @@
+{
+  "name": "SMTP Checker",
+  "description": "A high-performance web-based SMTP testing tool to scan and verify mail server credentials dynamically.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
